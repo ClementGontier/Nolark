@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html lang="fr-FR">
+    <head>
+        <title>Casques Nolark : Sécurité et confort, nos priorités !</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="clément GONTIER">
+        <meta name="description" content="Découvrez des casques moto dépassant même les exigences
+              des tests de sécurité. Tous les casques Nolark au meilleur prix et avec en prime la
+              livraison gratuite !">
+        <link href="../css/casque.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../favicon.ico">
+
+    </head>
+    <body>
+        <header>
+            <picture>
+                <source media="(max-width:576px)" srcset="../images/banniere_small.png">
+                <source srcset="../images/banniere.png">
+                <img src="../images/banniere.png" alt="Nolark : Protect your minds ! Cette bannière
+                     montre un coucher de soleil avec une femme embrassant un homme réalisant en
+                     stoppie sur sa moto.">
+                <!-- Image basée sur la création originale de ShiftGraphiX sur Pixabay :
+                https://pixabay.com/fr/couple-stoppie-sportive-vélomoteur-3156613/ -->
+            </picture>
+            <nav>
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../pages/route.html">Route</a></li>
+                    <li><a href="../pages/cross.html">Cross</a></li>
+                    <li><a href="../pages/piste.html">Piste</a></li>
+                    <li><a href="../pages/enfants.html">Enfants</a></li>
+                    <li><a href="../pages/nous-contacter.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="carto">
+            <h1>Nous localiser :</h1>
+            <img src="https://www.mapquestapi.com/staticmap/v5/map?key=fZwiDiCNElWsaudkGczLD0EkU7RovoxC&locations=Toulon,Var,France|http://gil83.fr/nolark/marqueur_nolark.png&center=Châteauroux,Indre,France&zoom=6&size=600,610"
+                 alt="Carte OpenStreetMap statique avec le pays de Nolark">
+            <img src="https://www.mapquestapi.com/staticmap/v5/map?key=fZwiDiCNElWsaudkGczLD0EkU7RovoxC&locations=Rond-Point Bir-Hackeim, La Rode, Toulon, Var, Provence-AlpesCôte d'Azur, France métropolitaine, 83041, France|http://gil83.fr/nolark/marqueur_nolark.png&zoom=13&size=306,300"
+                 alt="Carte OpenStreetMap statique avec la ville de Nolark">
+            <img src="https://www.mapquestapi.com/staticmap/v5/map?key=fZwiDiCNElWsaudkGczLD0EkU7RovoxC&locations=43.12115, 5.94037|http://gil83.fr/nolark/marqueur_nolark.png&zoom=18&size=306,300" 
+                 alt="Carte OpenStreetMap statique avec l'emplacement de Nolark">
+        </section>
+        <section id="contact">
+            <h1>Nous contacter :</h1>
+            <form name="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST">
+                <fieldset id="coordo">
+                    <legend>Pour mieux vous connaître</legend>
+                    <div>
+                        <label for="i_nom">Votre nom :</label>
+                        <input type="text" name="i_nom" id="i_nom" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+                        <div class="input-validation">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="i_prenom">Votre prénom :</label>
+                        <input type="text" name="i_prenom" id="i_prenom" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+                        <div class="input-validation">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="i_email">Votre e-mail :</label>
+                        <input type="email" name="i_email" id="i_email" size="35" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <div class="input-validation">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="i_url">Votre url :</label>
+                        <input type="url" name="i_url" id="i_url" size="35" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+                    <div>
+                        <label for="lst_typeclient">Vous êtes :</label>
+                        <select name="lst_typeclient" id="lst_typeclient">
+                            <option value="1">Étudiant</option>
+                            <option value="2">Salarié du privé</option>
+                            <option value="3">Salarié du public</option>
+                            <option value="4">Chef d'entreprise</option>
+                            <option value="5">Journaliste</option>
+                            <option value="6">Professionnel(le) du casque</option>
+                            <option value="99">Autre statut</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="num_jour">Date de naissance :</label>
+                        <input type="number" name="num_jour" id="num_jour" min="1" max="31">
+                        <input type="number" name="num_mois" id="num_mois" min="1" max="12">
+                        <input type="number" name="num_annee" id="num_annee" min="1900" max="2023">
+                    </div>
+                    <fieldset id="marques">
+                        <legend>Vos marques préférés</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_agv" value="agv">
+                                    <label for="chk_agv">Agv</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Airoh" value="airoh">
+                                    <label for="chk_Airoh">Airoh</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_araï" value="araï">
+                                    <label for="chk_araï">Araï</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Beil" value="beil">
+                                    <label for="chk_Beil">Beil</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_bering" value="bering">
+                                    <label for="chk_bering">Bering</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_bultaco" value="bultaco">
+                                    <label for="chk_bultaco">Bultaco</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_caberg" value="caberg">
+                                    <label for="chk_caberg">Caberg</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Cameron" value="cameron">
+                                    <label for="chk_Cameron">Cameron</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Chaft" value="chaft">
+                                    <label for="chk_Chaft">Chaft</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Darts" value="Darts">
+                                    <label for="chk_Darts">Darts</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Dg" value="Dg">
+                                    <label for="chk_Dg">Dg</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Diesel" value="Diesel">
+                                    <label for="chk_Diesel">Diesel</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Falco" value="Falco">
+                                    <label for="chk_Falco">Falco</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_fox" value="fox">
+                                    <label for="chk_fox">fox</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_furygan" value="furygan">
+                                    <label for="chk_furygan">furygan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Givi" value="Givi">
+                                    <label for="chk_Givi">Givi</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Gpa" value="Gpa">
+                                    <label for="chk_Gpa">Gpa</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Grex" value="Grex">
+                                    <label for="chk_Grex">Grex</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Helstons" value="Helstons">
+                                    <label for="chk_Helstons">Helstons</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Hjc" value="Hjc"> 
+                                    <label for="chk_Hjc">Hjc</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Hokkey" value="Hokkey">
+                                    <label for="chk_Hokkey">Hokkey</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Ica" value="Ica">
+                                    <label for="chk_Ica">Ica</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Icon" value="Icon">
+                                    <label for="chk_Icon">Icon</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Ixon" value="Ixon">
+                                    <label for="chk_Ixon">Ixon</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Kenny" value="Kenny">
+                                    <label for="chk_Kenny">Kenny</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="chk_marques[]" id="chk_Knox" value="Knox">
+                                    <label for="chk_Knox">Knox</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <div>
+                        <label for="i_color">Votre couleur préférée :</label>
+                        <input type="color" name="i_color" id="i_color" size="35">
+                    </div>
+                </fieldset>
+                <fieldset id="motif">
+                    <legend>Motif du contact</legend>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_demande" value="demande">
+                        <label for="rd_demande">Demande d'information</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_Réclamation" value="Réclamation">
+                        <label for="rd_Réclamation">Réclamation</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_Satisfaction" value="Satisfaction">
+                        <label for="rd_Satisfaction">Satisfaction</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_Suivie" value="Suivie">
+                        <label for="rd_Suivie">Suivie de commande</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_Publicité" value="Publicité">
+                        <label for="rd_Publicité">Publicité</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rd_motif" id="rd_Autre" value="Autre">
+                        <label for="rd_Autre">Autre...</label>
+                    </div>
+                    <div>
+                        <label for="area_precisions">Si "Autre", veuillez préciser :</label>
+                        <br>
+                        <textarea name="area_precisions" id="area_precisions" cols="35" rows="10"></textarea>
+                    </div>
+                </fieldset>
+                <div id="controles">
+                    <input type="submit" id="sbmt_envoyer" name="sbmt_envoyer" value="Envoyer votre demande de contact">
+                    <input type="reset" name="rst_annuler" value="Effacer les réponses">
+                </div>
+            </form>
+        </section>
+        <footer><h3>©2023 Nolark - Crée par Clément GONTIER</h3></footer>
+    </body>
+</html>

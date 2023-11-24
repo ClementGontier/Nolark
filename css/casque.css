@@ -1,0 +1,407 @@
+* {
+    font-family: 'Montserrat'; /* Police par défaut */
+    box-sizing: border-box; /* Les tailles de conteneurs incluent bordures et
+    remplissages */
+    margin: 0; /* Mise à 0 des marges externes */
+    padding: 0; /* Mise à 0 des marges internes */
+    text-decoration: none; /* Suppression de la mise en forme habituelle des liens
+    (soulignement) */
+}
+@font-face{
+    font-family: "Montserrat";
+    src: url('polices/Montserrat-Regular.ttf') format("truetype");
+}
+@font-face{
+    font-family: "Nordic";
+    src: url('polices/Nordic.ttf') format("truetype");
+}
+header {
+    width: 916px; /* Les headers et sections occupent 916px (taille de la bannière) */
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-direction: column; /* Les éléments sont empilés */
+}
+body {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    width: 100%; /* La page occupe toute la largeur */
+}
+nav ul {
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-direction: row; /* Les éléments sont mis côte à côte */
+    justify-content: space-between; /* Les éléments sont répartis équitablement */
+    background-color: black; /* Couleur du fond */
+}
+nav ul li {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    list-style-type: none; /* Cette liste n'a pas de puce */
+    font-size: x-large; /* Le texte est grossi en XXL */
+    flex-grow: 1; /* L'espace occupé est élargie */
+}
+nav ul li a {
+    padding: 10px; /* Marge intérieure */
+    color: white; /* Couleur du texte */
+}
+nav ul li:hover {
+    background-color:#9a330a; /* Couleur du fond au passage de la souris */
+}
+#casques {
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-wrap: wrap; /* Les éléments flexibles sont disposés sur plusieurs lignes */
+    justify-content: flex-start; /* Les éléments sont alignés à gauche */
+    margin-bottom: 45px; /* Marge inférieure */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+#casques article {
+    width: 163px; /* Largeur de l'article */
+    height: 275px; /* Hauteur de l'article */
+    margin: 5px; /* Marges extérieures */
+    padding: 5px; /* Marges intérieures */
+    border: white thin solid; /* Bordure blanche */
+    position: relative; /* Position relative */
+}
+#casques article img {
+    margin-left: 6px; /* Marge gauche */
+}
+#casques article:hover {
+    border: #bbb thin solid; /* Bordure au survol */
+}
+#casques .prix {
+    color: red; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 10px; /* Marge basse */
+}
+#casques .marque {
+    text-transform : uppercase; /* Mise en majuscules du texte */
+    font-family: 'Nordic'; /* Police de caractères */
+    font-size: x-large; /* Le texte est grossi en XL */
+    display: inline; /* Affichage à la ligne pour éviter la superposition avec le stock
+    */
+    white-space: nowrap; /* Pas de passage à la ligne */
+    font-weight: bold; /* Texte en gras */
+}
+#casques .modele {
+    text-transform : capitalize; /* Toutes les premières lettres en majuscules */
+}
+#casques .stockok, #casques .stockko {
+    float: right; /* Alignement flottant à droite */
+    text-transform : uppercase; /* Mise en majuscules du texte */
+    padding: 2px; /* Marges intérieures */
+}
+#casques .stockok {
+    background-color: chartreuse; /* Couleur du fond */
+}
+#casques .stockko {
+    background-color: red; /* Couleur du fond */
+    color: white; /* Couleur du texte */
+}
+[data-tip] {
+    position: relative; /* Position relative à l'existant */
+    cursor: help; /* Curseur en forme de point d'interrogation */
+}
+[data-tip]:hover::before{
+    content: ''; /* Contenu vide */
+    top: 12px; /* Position du haut */
+    left: 10px; /* Position de l'angle gauche */
+    position:absolute; /* Position absolue */
+    /* Création d'un triangle à l'aide des bordures */
+    border-bottom: 12px solid fuchsia;
+    border-top: 5px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+footer {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    position: fixed; /* Le conteneur est fixé en fonction de ses coordonnées (à 0px du bas) */
+    bottom: 0px; /* Bas */
+    height: 35px; /* Hauteur */
+    width: 100%; /* Le pied de page occupe toute la largeur */
+    background-color:#2d2d2d; /* Couleur de fond */
+    color: #bbb; /* Couleur du texte */
+    text-align:center; /* Texte centré */
+}
+[data-tip]:hover::after {
+    text-transform : none; /* Annulation de la transformation précédente */
+    content: attr(data-tip); /* Le contenu correspond à la valeur de l'attribut data-tip
+   présent dans l'HTML */
+    position: absolute; /* Position absolue */
+    top: 28px; /* Position du haut */
+    left: 10px; /* Position de l'angle gauche */
+    white-space: nowrap; /* pas de retour à la ligne dans l'infobulle' */
+    padding: 5px 10px; /* Marges intérieures (Haut/Bas Gauche/Droite)*/
+    background-color: fuchsia; /* Couleur du fond */
+    color: white; /* Couleur du texte */
+    z-index: 1; /* L'infobulle sera au-dessus du reste */
+}
+footer p {
+    font-size: large; /* Le texte est grossi en L */
+}
+footer a{
+    color: inherit; /* Couleur du lien identique à celle du conteneur */
+}
+#casques .classement {
+    width: 85px;
+    height: 18px;
+    position: absolute;
+    bottom: 0;
+    object-fit: none;
+    margin: 0 39px;
+}
+#casques .classement.classement00 {
+    object-position: 0 0;
+}
+#casques .classement.classement05 {
+    object-position: 0 -18px;
+}
+#casques .classement.classement10 {
+    object-position: 0 -36px;
+}
+#casques .classement.classement15 {
+    object-position: 0 -54px;
+}
+#casques .classement.classement20 {
+    object-position: 0 -72px;
+}
+#casques .classement.classement25 {
+    object-position: 0 -90px;
+}
+#casques .classement.classement30 {
+    object-position: 0 -108px;
+}
+#casques .classement.classement35 {
+    object-position: 0 -126px;
+}
+#casques .classement.classement40 {
+    object-position: 0 -144px;
+}
+#casques .classement.classement45 {
+    object-position: 0 -162px;
+}
+#casques .classement.classement50 {
+    object-position: 0 -180px;
+}
+#video {
+    display: flex; /* Ce conteneur est "flexible" */
+}
+#video img, #video article p, #video iframe {
+    padding-top: 16px; /* Marges intérieures Haut*/
+}
+#video img {
+    float: left;   /* Alignement flottant à gauche */
+}
+#video article {
+    width: 50%;    /* Le pied de page occupe la moitié de la largeur */
+    padding-right: 10px;   /* Marges intérieures Droite*/
+}
+#video article p span {
+    color: red;    /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+}
+#video article p {
+    text-align: justify;   /* Texte justifié */
+}
+#video article p {
+    padding-right: 10px;   /* Marges intérieures Droite*/
+    text-align: justify;   /* Texte justifié */
+}
+#carto img:nth-child(2) {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+#carto img:last-child {
+    margin-top: 10px;
+    float: right;
+}
+#carto img:nth-child(3) {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: right; /* Les éléments portés sont centrés à l'horizontal */
+    margin-top: 20px;
+}
+#carto {
+    padding-top: 10px;
+}
+h1 {
+    color: #ff6811;
+    font-size: xx-large;
+    margin: 10px 0;
+}
+#coordo input{
+    flex: 1;
+}
+#coordo select{
+    flex: 1;
+}
+#contact form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+#contact form fieldset {
+    padding: 10px;
+}
+section {
+    width: 916px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+#controles input:first-child {
+    margin-right: 10px;
+}
+#controles input {
+    padding: 10px;
+}
+#controles {
+    margin-top: 10px;
+}
+#coordo fieldset {
+    width: fit-content;
+    margin: auto;
+}
+#motif {
+    align-self: flex-start;
+}
+#coordo div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+#motif div {
+    margin: 10px;
+}
+#coordo label {
+    margin-right: 10px;
+}
+#coordo legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+#motif legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+#motif label {
+    margin-left: 10px;
+}
+#coordo div.input-validation {
+    margin: 0;
+}
+input[type="text"]:valid ~ .input-validation::before, input[type="email"]:valid ~ .input-validation::before {
+    content: "✔";
+    margin-left: 5px;
+    color: green;
+}
+input:invalid {
+    color: red;
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: large;
+    }
+    header, section {
+        width: auto;
+    }
+    header img {
+        width: 100%; /* Bannière sur toute la largeur */
+        background-color: black; /* Extension artificielle noire */
+        padding-bottom: 15px; /* du bas de l'image sur 15 pixels */
+    }
+    nav {
+        position: relative;
+        top: 7px;
+        left: 7px;
+        z-index: 1; /* La barre de navigation devra être au premier plan */
+        width: 569px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        margin: -39px 0 0 -60px;
+        padding: 50px 10px 10px 60px;
+        background: black;
+        list-style-type: none;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s ease;
+    }
+    nav ul li {
+        display: list-item;
+        padding: 10px 0;
+        width: 100%;
+    }
+    nav input {
+        display: block;
+        position: absolute;
+        opacity: 0;
+        z-index: 2;
+    }
+    nav span {
+        display: block;
+        width: 30px;
+        height: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        background: black;
+        border-radius: 3px;
+        z-index: 1; /* En dessous de l'input défini avant */
+        transition: transform 0.5s ease, background 0.5s ease;
+    }
+    nav input:checked ~ span {
+        background: white;
+    }
+    nav input:checked ~ span:nth-child(2) {
+        transform: rotate(45deg) translate(7px, 5px);
+    }
+    nav input:checked ~ span:nth-child(4) {
+        transform: rotate(-45deg) translate(10px, -6px);
+    }
+    nav input:checked ~ span:nth-child(3) {
+        opacity: 0;
+    }
+    nav input:checked ~ ul {
+        transform: none;
+    }
+    iframe{
+        width: 576px;
+        padding-top: 10px;
+    }
+    #casques {
+        display: flex; /* Ce conteneur est "flexible" */
+        flex-wrap: wrap; /* Les éléments flexibles sont disposés sur plusieurs lignes */
+        justify-content: flex-start; /* Les éléments sont alignés à gauche */
+        margin-bottom: 45px; /* Marge inférieure */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #video {
+        display: flex; /* Ce conteneur est "flexible" */
+        flex-direction: column;
+    }
+    #video article {
+        width: 100%;
+    }
+    #carto img:nth-child(2){
+        display: none
+    }
+    #carto img:last-child{
+        width: 576px;
+    }
+    #carto img:nth-child(3){
+        width: 576px;
+    }
+    header, section {
+        width: 576px;
+    }
+    #coordo div{
+        display:block;
+    }
+}
