@@ -425,4 +425,7 @@ input:invalid {
     #carto img:last-child {
         width: 383px;
     }
+    #coordo div {
+        display: flex;
+    }
 }

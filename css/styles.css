@@ -248,6 +248,9 @@ footer a{
     #thematique {
         flex-direction: row; /* Sur tablette, les casques de l'accueil sont côte à côte */
     }
+    #thematique article {
+    flex: 1;
+  }
 }
 
 
