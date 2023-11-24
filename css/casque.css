@@ -406,7 +406,15 @@ input:invalid {
     }
 }
 @media screen and (min-width:576px) and (max-width:768px) {
-  header, section {
+    header, section {
         width: auto;
+    }
+    #casques {
+        display: flex; /* Ce conteneur est "flexible" */
+        flex-wrap: wrap; /* Les éléments flexibles sont disposés sur plusieurs lignes */
+        justify-content: flex-start; /* Les éléments sont alignés à gauche */
+        margin-bottom: 45px; /* Marge inférieure */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 }
