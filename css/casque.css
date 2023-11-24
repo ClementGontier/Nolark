@@ -302,7 +302,7 @@ input:invalid {
     color: red;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     body {
         font-size: large;
     }
@@ -403,5 +403,10 @@ input:invalid {
     }
     #coordo div{
         display:block;
+    }
+}
+@media screen and (min-width:576px) and (max-width:768px) {
+    #thematique {
+        flex-direction: row; /* Sur tablette, les casques de l'accueil sont côte à côte */
     }
 }

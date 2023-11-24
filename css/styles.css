@@ -165,7 +165,7 @@ footer a{
     color: inherit; /* Couleur du lien identique à celle du conteneur */
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     body {
         font-size: large;
     }
@@ -244,3 +244,10 @@ footer a{
         flex: none;
     }
 }
+@media screen and (min-width:576px) and (max-width:768px) {
+    #thematique {
+        flex-direction: row; /* Sur tablette, les casques de l'accueil sont côte à côte */
+    }
+}
+
+
