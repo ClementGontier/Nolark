@@ -417,4 +417,12 @@ input:invalid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }
+    #carto img:nth-child(3) {
+        width: 383px;
+        float: left;
+        margin-top: 10px;
+    }
+    #carto img:last-child {
+        width: 383px;
+    }
 }
