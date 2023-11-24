@@ -406,7 +406,7 @@ input:invalid {
     }
 }
 @media screen and (min-width:576px) and (max-width:768px) {
-    #thematique {
-        flex-direction: row; /* Sur tablette, les casques de l'accueil sont côte à côte */
+  header, section {
+        width: auto;
     }
 }
