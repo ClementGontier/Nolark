@@ -47,6 +47,12 @@ nav ul li a {
 nav ul li:hover {
     background-color:#9a330a; /* Couleur du fond au passage de la souris */
 }
+picture img{
+    margin-bottom: -5px;
+}
+nav input{
+    display: none;
+}
 #casques {
     display: flex; /* Ce conteneur est "flexible" */
     flex-wrap: wrap; /* Les éléments flexibles sont disposés sur plusieurs lignes */

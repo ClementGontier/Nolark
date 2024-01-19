@@ -1,0 +1,168 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 24 janv. 2024, 14:19:09
+    Author     : clement.gontier
+*/
+
+* {
+    font-family: 'Montserrat'; /* Police par défaut */
+    box-sizing: border-box; /* Les tailles de conteneurs incluent bordures et
+    remplissages */
+    margin: 0; /* Mise à 0 des marges externes */
+    padding: 0; /* Mise à 0 des marges internes */
+    text-decoration: none; /* Suppression de la mise en forme habituelle des liens
+    (soulignement) */
+}
+@font-face{
+    font-family: "Montserrat";
+    src: url('polices/Montserrat-Regular.ttf') format("truetype");
+}
+@font-face{
+    font-family: "Nordic";
+    src: url('polices/Nordic.ttf') format("truetype");
+}
+header {
+    width: 916px; /* Les headers et sections occupent 916px (taille de la bannière) */
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-direction: column; /* Les éléments sont empilés */
+}
+body {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    flex-direction: column; /* Les éléments sont empilés */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    width: 100%; /* La page occupe toute la largeur */
+}
+nav ul {
+    display: flex; /* Ce conteneur est "flexible" */
+    flex-direction: row; /* Les éléments sont mis côte à côte */
+    justify-content: space-between; /* Les éléments sont répartis équitablement */
+    background-color: black; /* Couleur du fond */
+}
+nav ul li {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    list-style-type: none; /* Cette liste n'a pas de puce */
+    font-size: x-large; /* Le texte est grossi en XXL */
+    flex-grow: 1; /* L'espace occupé est élargie */
+}
+nav ul li a {
+    padding: 10px; /* Marge intérieure */
+    color: white; /* Couleur du texte */
+}
+nav ul li:hover {
+    background-color:#9a330a; /* Couleur du fond au passage de la souris */
+}
+picture img{
+    margin-bottom: -5px;
+}
+nav input{
+    display: none;
+}
+[data-tip] {
+    position: relative; /* Position relative à l'existant */
+    cursor: help; /* Curseur en forme de point d'interrogation */
+}
+[data-tip]:hover::before{
+    content: ''; /* Contenu vide */
+    top: 12px; /* Position du haut */
+    left: 10px; /* Position de l'angle gauche */
+    position:absolute; /* Position absolue */
+    /* Création d'un triangle à l'aide des bordures */
+    border-bottom: 12px solid fuchsia;
+    border-top: 5px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+footer {
+    display: flex; /* Ce conteneur est "flexible" */
+    justify-content: center; /* Les éléments portés sont centrés à l'horizontal */
+    align-items: center; /* Les éléments portés sont centrés à la verticale */
+    position: fixed; /* Le conteneur est fixé en fonction de ses coordonnées (à 0px du bas) */
+    bottom: 0px; /* Bas */
+    height: 35px; /* Hauteur */
+    width: 100%; /* Le pied de page occupe toute la largeur */
+    background-color:#2d2d2d; /* Couleur de fond */
+    color: #bbb; /* Couleur du texte */
+    text-align:center; /* Texte centré */
+}
+[data-tip]:hover::after {
+    text-transform : none; /* Annulation de la transformation précédente */
+    content: attr(data-tip); /* Le contenu correspond à la valeur de l'attribut data-tip
+   présent dans l'HTML */
+    position: absolute; /* Position absolue */
+    top: 28px; /* Position du haut */
+    left: 10px; /* Position de l'angle gauche */
+    white-space: nowrap; /* pas de retour à la ligne dans l'infobulle' */
+    padding: 5px 10px; /* Marges intérieures (Haut/Bas Gauche/Droite)*/
+    background-color: fuchsia; /* Couleur du fond */
+    color: white; /* Couleur du texte */
+    z-index: 1; /* L'infobulle sera au-dessus du reste */
+}
+footer p {
+    font-size: large; /* Le texte est grossi en L */
+}
+footer a{
+    color: inherit; /* Couleur du lien identique à celle du conteneur */
+}
+h1 {
+    color: #ff6811;
+    font-size: xx-large;
+    margin: 10px 0;
+}
+#coordo input{
+    flex: 1;
+}
+#coordo select{
+    flex: 1;
+}
+#contact form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    margin-top: 10px;
+}
+#contact form fieldset {
+    padding: 10px;
+}
+section {
+    width: 916px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+#coordo fieldset {
+    width: fit-content;
+    margin: auto;
+}
+#motif {
+    align-self: flex-start;
+}
+#coordo div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+#motif div {
+    margin: 10px;
+}
+#coordo label {
+    margin-right: 10px;
+}
+#coordo legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+#motif legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+#motif label {
+    margin-left: 10px;
+}
+#coordo div.input-validation {
+    margin: 0;
+}

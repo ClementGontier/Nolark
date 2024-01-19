@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Casques Nolark : Sécurité et confort, nos priorités !</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="clément GONTIER">
+        <meta name="description" content="Découvrez des casques moto dépassant même les exigences
+              des tests de sécurité. Tous les casques Nolark au meilleur prix et avec en prime la
+              livraison gratuite !">
+        <link href="../css/remuneration.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="../favicon.ico">
+        <script src="../js/remuneration.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <picture>
+                <source media="(max-width:576px)" srcset="../images/banniere_small.png">
+                <source srcset="../images/banniere.png">
+                <img src="../images/banniere.png" alt="Nolark : Protect your minds ! Cette bannière
+                     montre un coucher de soleil avec une femme embrassant un homme réalisant en
+                     stoppie sur sa moto.">
+                <!-- Image basée sur la création originale de ShiftGraphiX sur Pixabay :
+                https://pixabay.com/fr/couple-stoppie-sportive-vélomoteur-3156613/ -->
+            </picture>
+            <nav>
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../pages/route.html">Route</a></li>
+                    <li><a href="../pages/cross.html">Cross</a></li>
+                    <li><a href="../pages/piste.html">Piste</a></li>
+                    <li><a href="../pages/enfants.html">Enfants</a></li>
+                    <li><a href="../pages/nous-contacter.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form id="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST">
+            <fieldset id="coordo">
+                <legend>Simulateur rémunération Nolark</legend>
+                <div>
+                    <label for="i_Ancienneté">Ancienneté :</label>
+                    <input type="text" name="i_Ancienneté" id="i_Ancienneté" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+
+                </div>
+                <div>
+                    <label for="i_nbS20">nb casque S 20 vendu :</label>
+                    <input type="text" name="i_nbS20" id="i_nbS20" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+
+                </div>
+                <div>
+                    <label for="i_nbXSpirit">nb casque X Spirit vendu :</label>
+                    <input type="text" name="i_nbXSpirit" id="i_nbXSpirit" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+
+                </div>
+                <div>
+                    <label for="i_nbMultitec">nb casque Multitec vendu :</label>
+                    <input type="text" name="i_nbMultitec" id="i_nbMultitec" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+
+                </div>
+                <div>
+                    <label for="i_Salaire">Salaire :</label>
+                    <input type="text" name="i_Salaire" id="i_Salaire" size="35" pattern="^[a-zA-Z\s\-]+$" required>
+
+                </div>
+                <div>
+                    <input type="button" id="btn_envoyer" name="smbt_envoyer" value="Calculer votre salaire">
+                    <input type="reset" name="rst_annuler" value="Effacer les réponses">
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
+

@@ -74,6 +74,9 @@ section {
     float: left; /* Mise en élément "flottant" contre lequel on peut venir se poser */
     margin-right: 10px; /* Marge de droite */
 }
+picture img{
+    margin-bottom: -5px;
+}
 #principal article p {
     padding-top: 16px; /* Marge intérieure supérieure */
 }
@@ -164,7 +167,9 @@ footer p {
 footer a{
     color: inherit; /* Couleur du lien identique à celle du conteneur */
 }
-
+nav input{
+    display: none;
+}
 @media screen and (max-width: 768px) {
     body {
         font-size: large;
