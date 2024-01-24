@@ -46,7 +46,14 @@ function commission_Multitec(nbMulti) {
     else
         return (nbMulti-50)*comm_Multitec_plusde50+30*comm_Multitec_moinsde50+20*comm_Multitec_moinsde20;
 }
-//let remuneration=ancienneté()+ commission_S_20() + commission_X_Spirit() + commission_Multitec();
+function indemnitékm(nbkm){
+    const indemnité=0.15;
+    if (nbkm<350)
+        return nbkm*indemnité;
+    else
+        return 350*indemnité;
+}
+
 function validEnvoi() {
     if (window.document.querySelector("#i_Ancienneté").value === "" ||
             window.document.querySelector("#i_nbS20").value === ""||
@@ -55,11 +62,12 @@ function validEnvoi() {
         alert("Tous les champs doivent être remplis"); // On affiche un message
     } 
     else {
+        nbkm = parseInt(window.document.querySelector("#i_nbkm").value);
         nbS20 = parseInt(window.document.querySelector("#i_nbS20").value);
         nbXS = parseInt(window.document.querySelector("#i_nbXSpirit").value);
         nbMulti = parseInt(window.document.querySelector("#i_nbMultitec").value);
         nbAncien = parseInt(window.document.querySelector("#i_Ancienneté").value);
-        remuneration=ancienneté(1100, nbAncien)+ commission_S_20(nbS20) + commission_X_Spirit(nbXS) + commission_Multitec(nbMulti); // On peut envoyer    
+        remuneration=ancienneté(1100, nbAncien)+ commission_S_20(nbS20) + commission_X_Spirit(nbXS) + commission_Multitec(nbMulti) + indemnitékm(nbkm); // On peut envoyer    
         window.document.querySelector("#i_Salaire").value = remuneration;
     }
 }
