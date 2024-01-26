@@ -166,3 +166,16 @@ section {
 #coordo div.input-validation {
     margin: 0;
 }
+input:not(#i_salaire)[type="text"]:valid ~ .input-validation::before, input:not(#i_salaire)[type="number"]:valid ~ .input-validation::before {
+    content: "✔";
+    margin-left: 5px;
+    color: green;
+}
+input:not(#i_salaire):invalid {
+    color: red;
+}
+#remuneration {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}

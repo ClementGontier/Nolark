@@ -13,7 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
               livraison gratuite !">
         <link href="../css/remuneration.css" rel="stylesheet" type="text/css">
         <link rel="icon" href="../favicon.ico">
-        <script src="../js/remuneration.js"></script>
+        <script src="../js/livrexpress.js"></script>
 
     </head>
     <body>
@@ -44,39 +44,24 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         </header>
         <form id="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST">
             <fieldset id="coordo">
-                <legend>Simulateur rémunération Nolark</legend>
+                <legend>Simulateur transporteurs Nolark</legend>
                 <div>
                     <label for="i_Ancienneté">Ancienneté :</label>
                     <input type="number" name="i_Ancienneté" id="i_Ancienneté" required>
+                </div>
+                <div>
+                    <label for="i_dist">distance parcourue :</label>
+                    <input type="number" name="i_dist" id="i_dist" required>
 
                 </div>
                 <div>
-                    <label for="i_nbS20">nb casque S 20 vendu :</label>
-                    <input type="number" name="i_nbS20" id="i_nbS20" required>
+                    <label for="i_nbAccidents">nb accidents :</label>
+                    <input type="number" name="i_nbAccidents" id="i_nbAccidents" required>
 
                 </div>
+                <h2 id="remuneration"></h2>
                 <div>
-                    <label for="i_nbXSpirit">nb casque X Spirit vendu :</label>
-                    <input type="number" name="i_nbXSpirit" id="i_nbXSpirit" required>
-
-                </div>
-                <div>
-                    <label for="i_nbMultitec">nb casque Multitec vendu :</label>
-                    <input type="number" name="i_nbMultitec" id="i_nbMultitec" required>
-
-                </div>
-                <div>
-                    <label for="i_nbkm">nb km parcouru :</label>
-                    <input type="number" name="i_nbkm" id="i_nbkm" required>
-
-                </div>
-                <div>
-                    <label for="i_Salaire">Salaire :</label>
-                    <input type="number" name="i_Salaire" id="i_Salaire" required>
-
-                </div>
-                <div>
-                    <input type="button" id="btn_envoyer" name="smbt_envoyer" value="Calculer votre salaire">
+                    <input type="button" id="btn_envoyer" name="smbt_envoyer" value="Calculer votre prime">
                     <input type="reset" name="rst_annuler" value="Effacer les réponses">
                 </div>
             </fieldset>

@@ -72,7 +72,6 @@ function validEnvoi() {
     }
 }
 
-//window.document.querySelector("#i_Salaire").value.innerHTML = remuneration ;
 window.addEventListener("load", function () {
     
     window.document.querySelector("#btn_envoyer").addEventListener("click", validEnvoi);
